@@ -14,7 +14,8 @@
     "build": "gulp build",
     "build-css": "gulp css",
     "build-js": "gulp js",
-    "build-html": "gulp html"
+    "build-html": "gulp html",
+    "deploy-development": "gulp deploy-development"
   },
   "keywords": [
     "gulp"
@@ -31,9 +32,10 @@
     "gulp": "git://github.com/gulpjs/gulp.git#4.0",
     "gulp-jade": "1.1.*",
     "gulp-pleeease": "2.0.*",
+    "gulp-rsync": "0.0.*",
     "gulp-sass": "2.1.*",
-    "read-config": "2.0.*",
     "jquery": "2.*",
+    "read-config": "2.0.*",
     "vinyl-source-stream": "1.1.*"
   },
   "babel": {

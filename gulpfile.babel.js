@@ -11,6 +11,7 @@ import debowerify from 'debowerify';
 import jade from 'gulp-jade';
 import browserSync from 'browser-sync';
 import readConfig from 'read-config';
+import rsync from "gulp-rsync";
 
 
 // const
@@ -83,6 +84,16 @@ gulp.task('browser-sync', () => {
 });
 
 gulp.task('serve', gulp.series('browser-sync'));
+
+
+// deploy
+gulp.task('deploy-development', () => {
+    const config = require(`${CONFIG}/rsync-development.json`);
+    config.root = DEST;
+    
+    return gulp.src(`${DEST}/**/*`)
+        .pipe(rsync(config));
+});
 
 
 // default

@@ -11,7 +11,7 @@ import debowerify from 'debowerify';
 import jade from 'gulp-jade';
 import browserSync from 'browser-sync';
 import readConfig from 'read-config';
-import rsync from "gulp-rsync";
+import rsync from 'gulp-rsync';
 
 
 // const

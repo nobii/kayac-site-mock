@@ -1,0 +1,35 @@
+.member-list {
+    overflow: hidden;
+    max-width: 800px;
+    margin: auto;
+}
+
+.member-list__item {
+    position: relative;
+    float: left;
+    margin: 1em;
+}
+
+.member-list__grid {
+    display: block;
+    text-decoration: none;
+    color: white;
+    @include borderHover;
+}
+
+.member-list__grid__img {
+    $size: 120px;
+    display: block;
+    width: $size;
+    height: $size;
+}
+
+.member-list__grid__name {
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
+    width: 100%;
+    padding: 0.2em 0em;
+    text-align: center;
+    background-color: rgba(black, 0.2);
+}

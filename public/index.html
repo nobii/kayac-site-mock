@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <!-- meta-->
+    <title>kayac-site-mock</title>
+    <meta name="description" content="kayac-site-mock web page.">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- smartphone meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- ogp-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="kayac-site-mock">
+    <meta property="og:site_name" content="kayac-site-mock">
+    <meta property="og:description" content="kayac-site-mock web page.">
+    <meta property="og:locale" content="ja_JP">
+    <!-- twitter card-->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="kayac-site-mock">
+    <meta property="twitter:description" content="kayac-site-mock web page.">
+    <!-- stylesheet-->
+    <script src="js/lib/html5shiv.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="title">kayac member page</h1>
+      <ul class="member-list js-member-root"></ul><a href="#" class="more js-more">もっと見る</a>
+      <script type="text/lodash" id="template-member">
+        <li class="member-list__item"><a href="http://www.kayac.com<%= url %>" target="_blank" class="member-list__grid"><img src="<%= grid_url %>" class="member-list__grid__img">
+            <div class="member-list__grid__name"><%= name %></div></a></li>
+      </script>
+    </div>
+    <!-- javascript-->
+    <script src="js/kayacSiteMock.js"></script>
+  </body>
+</html>

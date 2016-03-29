@@ -1,0 +1,11 @@
+.more {
+    display: block;
+    margin: auto;
+    width: 120px;
+    padding: 0.5em 0em;
+    background-color: #eee;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    @include borderHover;
+}

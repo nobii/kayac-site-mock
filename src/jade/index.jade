@@ -8,4 +8,12 @@ prepend ConfigBlock
 // append JavascriptBlock
 
 block ContentBlock
-  | hello, world!
+  h1.title kayac member page
+  ul.member-list.js-member-root
+  a.more.js-more(href="#") もっと見る
+  script(type="text/lodash")#template-member
+    li.member-list__item
+      a(href!="http://www.kayac.com<%= url %>", target="_blank").member-list__grid
+        img(src!='<%= grid_url %>').member-list__grid__img
+        .member-list__grid__name!= '<%= name %>'
+  

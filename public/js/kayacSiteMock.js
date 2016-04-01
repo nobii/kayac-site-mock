@@ -24949,7 +24949,6 @@ var ACTIVE_CLASS_NAME = 'is-active';
     function loadNews() {
         _jquery2.default.ajax('/api/news.json').done(function (json) {
             _lodash2.default.each(json, function (news) {
-                console.log(news);
                 $newsRoot.append(renderNews(news));
             });
         });

@@ -20,7 +20,6 @@ const ACTIVE_CLASS_NAME = 'is-active';
         $.ajax('/api/news.json')
             .done((json) => {
                 _.each(json, (news) => {
-                    console.log(news);
                     $newsRoot.append(renderNews(news));
                 });
             });

@@ -17,7 +17,7 @@ const ACTIVE_CLASS_NAME = 'is-active';
     const renderNews = _.template($('#template-news').html());
 
     function loadNews () {
-        $.ajax('/api/news.json')
+        $.ajax({ url: '/api/news.json', dataType: 'json' })
             .done((json) => {
                 _.each(json, (news) => {
                     $newsRoot.append(renderNews(news));
@@ -49,7 +49,7 @@ const ACTIVE_CLASS_NAME = 'is-active';
 
     function loadMember () {
         currentMemberPage++;
-        $.ajax(`/api/member.${currentMemberPage}.json`)
+        $.ajax({ url: `/api/member.${currentMemberPage}.json`, dataType: 'json' })
             .done((json) => {
                 _.each(json, (member) => {
                     $memberRoot.append(renderMember(member));

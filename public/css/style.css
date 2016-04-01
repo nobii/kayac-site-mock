@@ -86,7 +86,8 @@ table {
   padding: 1em;
   color: #000;
   border: solid 3px black;
-  transition: border-color 0.2s; }
+  transition-property: border-color, color;
+  transition-duration: 0.2s; }
   .news-list__btn:hover {
     border-color: #f00;
     color: #f00; }
@@ -107,7 +108,8 @@ table {
   text-decoration: none;
   color: white;
   border: solid 3px black;
-  transition: border-color 0.2s; }
+  transition-property: border-color, color;
+  transition-duration: 0.2s; }
   .member-list__grid:hover {
     border-color: #f00;
     color: #f00; }
@@ -136,7 +138,8 @@ table {
   text-align: center;
   text-decoration: none;
   border: solid 3px black;
-  transition: border-color 0.2s; }
+  transition-property: border-color, color;
+  transition-duration: 0.2s; }
   .more:hover {
     border-color: #f00;
     color: #f00; }

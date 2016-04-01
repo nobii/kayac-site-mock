@@ -11,6 +11,7 @@ import jade from 'gulp-jade';
 import browserSync from 'browser-sync';
 import readConfig from 'read-config';
 import eslint from 'gulp-eslint';
+import rsync from 'gulp-rsync';
 
 import transform from './lib/vinyl-transform';
 
@@ -98,6 +99,16 @@ gulp.task('eslint', () => {
 });
 
 gulp.task('test', gulp.parallel('eslint'));
+
+
+// deploy
+gulp.task('deploy-development', () => {
+    const config = require(`${CONFIG}/rsync-development.json`);
+    config.root = DEST;
+    
+    return gulp.src(`${DEST}/**/*`)
+        .pipe(rsync(config));
+});
 
 
 // default

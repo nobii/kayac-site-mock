@@ -73,10 +73,13 @@ table {
     color: #f00;
     font-weight: bold; }
 
+.main {
+  margin: 0em 1em; }
+
 .news-list {
   overflow: hidden;
   max-width: 800px;
-  margin: 1em auto; }
+  margin: auto; }
 
 .news-list__item {
   margin: 1em 0em; }
@@ -95,7 +98,7 @@ table {
 .member-list {
   overflow: hidden;
   max-width: 800px;
-  margin: 1em auto;
+  margin: 0.5em auto;
   text-align: center; }
 
 .member-list__item {

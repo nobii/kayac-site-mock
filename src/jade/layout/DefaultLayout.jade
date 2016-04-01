@@ -59,7 +59,10 @@ html(lang="ja")
 
   body
     .wrapper
-      block ContentBlock
+      include ../partial/header
+      main.main
+        block ContentBlock
+      include ../partial/footer
 
     // javascript
     block JavascriptBlock

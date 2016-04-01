@@ -33,12 +33,14 @@
           </ul>
         </nav>
       </header>
-      <ul class="member-list js-member-root"></ul><a href="#" class="more js-more">もっと見る</a>
+      <main class="main">
+        <ul class="member-list js-member-root"></ul><a href="#" class="more js-more">もっと見る</a>
+        <script type="text/lodash" id="template-member">
+          <li class="member-list__item"><a href="http://www.kayac.com<%= url %>" target="_blank" class="member-list__grid"><img src="<%= grid_url %>" class="member-list__grid__img">
+              <div class="member-list__grid__name"><%= name %></div></a></li>
+        </script>
+      </main>
       <footer class="footer"><small>&copy; Kayac inc.</small></footer>
-      <script type="text/lodash" id="template-member">
-        <li class="member-list__item"><a href="http://www.kayac.com<%= url %>" target="_blank" class="member-list__grid"><img src="<%= grid_url %>" class="member-list__grid__img">
-            <div class="member-list__grid__name"><%= name %></div></a></li>
-      </script>
     </div>
     <!-- javascript-->
     <script src="js/kayacSiteMock.js"></script>

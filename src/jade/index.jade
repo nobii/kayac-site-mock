@@ -14,7 +14,5 @@ block ContentBlock
   
   script(type="text/lodash")#template-news
     li.news-list__item
-      a(href!="http://www.kayac.com<%= url %>", target="_blank").news-list__grid
-        img(src!='<%= grid_url %>').news-list__grid__img
-        .news-list__grid__name!= '<%= name %>'
+      a.news-list__btn(href!='http://www.kayac.com<%= url %>', target="_blank")!= '<%= name %>'
   

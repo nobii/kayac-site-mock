@@ -24934,6 +24934,30 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var ACTIVE_CLASS_NAME = 'is-active';
 
+(function setupNewsPage() {
+    var $menu = (0, _jquery2.default)('.js-menu-news');
+    var $newsRoot = (0, _jquery2.default)('.js-news-root');
+
+    if (!$newsRoot.length) {
+        return;
+    }
+
+    $menu.addClass(ACTIVE_CLASS_NAME);
+
+    var renderNews = _lodash2.default.template((0, _jquery2.default)('#template-news').html());
+
+    function loadNews() {
+        _jquery2.default.ajax('/api/news.json').done(function (json) {
+            _lodash2.default.each(json, function (news) {
+                console.log(news);
+                $newsRoot.append(renderNews(news));
+            });
+        });
+    }
+
+    loadNews();
+})();
+
 (function setupMemberPage() {
     var $menu = (0, _jquery2.default)('.js-menu-member');
     var $memberRoot = (0, _jquery2.default)('.js-member-root');

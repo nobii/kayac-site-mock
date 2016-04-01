@@ -1,0 +1,16 @@
+.news-list {
+    overflow: hidden;
+    max-width: $max_width;
+    margin: 1em auto;
+}
+
+.news-list__item {
+    margin: 1em 0em;
+}
+
+.news-list__btn {
+    display: block;
+    padding: 1em;
+    color: #000;
+    @include borderHover;
+}

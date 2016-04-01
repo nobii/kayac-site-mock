@@ -24932,30 +24932,41 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $root = (0, _jquery2.default)('.js-member-root');
-var $more = (0, _jquery2.default)('.js-more');
+var ACTIVE_CLASS_NAME = 'is-active';
 
-var render = _lodash2.default.template((0, _jquery2.default)('#template-member').html());
+(function setupMemberPage() {
+    var $menu = (0, _jquery2.default)('.js-menu-member');
+    var $memberRoot = (0, _jquery2.default)('.js-member-root');
+    var $more = (0, _jquery2.default)('.js-more');
 
-var currentPage = 0;
+    if (!$memberRoot.length) {
+        return;
+    }
 
-function loadMore() {
-    currentPage++;
-    _jquery2.default.ajax('/api/member.' + currentPage + '.json').done(function (json) {
-        _lodash2.default.each(json, function (member) {
-            $root.append(render(member));
+    $menu.addClass(ACTIVE_CLASS_NAME);
+
+    var renderMember = _lodash2.default.template((0, _jquery2.default)('#template-member').html());
+
+    var currentMemberPage = 0;
+
+    function loadMember() {
+        currentMemberPage++;
+        _jquery2.default.ajax('/api/member.' + currentMemberPage + '.json').done(function (json) {
+            _lodash2.default.each(json, function (member) {
+                $memberRoot.append(renderMember(member));
+            });
+        }).fail(function (err) {
+            $more.hide();
+            alert('こちらが最後のページです。');
         });
-    }).fail(function (err) {
-        $more.hide();
-        alert('こちらが最後のページです。');
+    }
+
+    $more.on('click', function (e) {
+        e.preventDefault();
+        loadMember();
     });
-}
 
-$more.on('click', function (e) {
-    e.preventDefault();
-    loadMore();
-});
-
-loadMore();
+    loadMember();
+})();
 
 },{"jquery":1,"lodash":2}]},{},[3]);

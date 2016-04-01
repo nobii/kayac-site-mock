@@ -51,20 +51,38 @@ table {
   font-size: 16px;
   line-height: 1.5; }
 
-.title {
+.header {
+  padding: 1em 0em;
   text-align: center;
+  background-color: #eee; }
+
+.header__title {
   font-size: 150%;
-  margin: 2em 0em; }
+  margin-bottom: 0.5em; }
+
+.header__menu__item {
+  display: inline-block;
+  margin: 0em 0.5em; }
+
+.header__menu__btn {
+  color: inherit; }
+  .header__menu__btn:hover {
+    color: #f00; }
+  .header__menu__btn.is-active {
+    text-decoration: none;
+    color: #f00;
+    font-weight: bold; }
 
 .member-list {
   overflow: hidden;
   max-width: 800px;
-  margin: auto; }
+  margin: 1em auto;
+  text-align: center; }
 
 .member-list__item {
   position: relative;
-  float: left;
-  margin: 1em; }
+  display: inline-block;
+  margin: 0.5em; }
 
 .member-list__grid {
   display: block;

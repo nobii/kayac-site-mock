@@ -1,13 +1,14 @@
 .member-list {
     overflow: hidden;
     max-width: 800px;
-    margin: auto;
+    margin: 1em auto;
+    text-align: center;
 }
 
 .member-list__item {
     position: relative;
-    float: left;
-    margin: 1em;
+    display: inline-block;
+    margin: 0.5em;
 }
 
 .member-list__grid {

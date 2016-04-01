@@ -1,30 +1,42 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
-const $root = $('.js-member-root');
-const $more = $('.js-more');
+const ACTIVE_CLASS_NAME = 'is-active';
 
-const render = _.template($('#template-member').html());
 
-let currentPage = 0;
+(function setupMemberPage() {
+    const $menu = $('.js-menu-member');
+    const $memberRoot = $('.js-member-root');
+    const $more = $('.js-more');
 
-function loadMore () {
-    currentPage++;
-    $.ajax(`/api/member.${currentPage}.json`)
-        .done((json) => {
-            _.each(json, (member) => {
-                $root.append(render(member));
+    if (!$memberRoot.length) {
+        return;
+    }
+
+    $menu.addClass(ACTIVE_CLASS_NAME);
+
+    const renderMember = _.template($('#template-member').html());
+
+    let currentMemberPage = 0;
+
+    function loadMember () {
+        currentMemberPage++;
+        $.ajax(`/api/member.${currentMemberPage}.json`)
+            .done((json) => {
+                _.each(json, (member) => {
+                    $memberRoot.append(renderMember(member));
+                });
+            })
+            .fail((err) => {
+                $more.hide();
+                alert('こちらが最後のページです。');
             });
-        })
-        .fail((err) => {
-            $more.hide();
-            alert('こちらが最後のページです。');
-        });
-}
+    }
 
-$more.on('click', (e) => {
-    e.preventDefault();
-    loadMore();
-});
+    $more.on('click', (e) => {
+        e.preventDefault();
+        loadMember();
+    });
 
-loadMore();
+    loadMember();
+})();

@@ -24951,6 +24951,8 @@ var ACTIVE_CLASS_NAME = 'is-active';
             _lodash2.default.each(json, function (news) {
                 $newsRoot.append(renderNews(news));
             });
+        }).fail(function (err) {
+            alert('ニュースの読み込みに失敗しました。');
         });
     }
 
@@ -24980,7 +24982,7 @@ var ACTIVE_CLASS_NAME = 'is-active';
             });
         }).fail(function (err) {
             $more.hide();
-            alert('こちらが最後のページです。');
+            alert('メンバーの読み込みに失敗しました。');
         });
     }
 

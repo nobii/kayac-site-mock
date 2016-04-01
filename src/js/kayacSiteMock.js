@@ -22,6 +22,9 @@ const ACTIVE_CLASS_NAME = 'is-active';
                 _.each(json, (news) => {
                     $newsRoot.append(renderNews(news));
                 });
+            })
+            .fail((err) => {
+                alert('ニュースの読み込みに失敗しました。');
             });
     }
 
@@ -54,7 +57,7 @@ const ACTIVE_CLASS_NAME = 'is-active';
             })
             .fail((err) => {
                 $more.hide();
-                alert('こちらが最後のページです。');
+                alert('メンバーの読み込みに失敗しました。');
             });
     }
 

@@ -49,8 +49,7 @@ table {
 .wrapper {
   font-family: sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-  padding-bottom: 3em; }
+  line-height: 1.5; }
 
 .title {
   text-align: center;
@@ -103,3 +102,10 @@ table {
   transition: border-color 0.2s; }
   .more:hover {
     border-color: red; }
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin-top: 2em;
+  padding: 0.5em 0em; }

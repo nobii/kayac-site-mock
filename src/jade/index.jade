@@ -11,6 +11,9 @@ block ContentBlock
   h1.title kayac member page
   ul.member-list.js-member-root
   a.more.js-more(href="#") もっと見る
+  footer.footer
+    small &copy; Kayac inc.
+  
   script(type="text/lodash")#template-member
     li.member-list__item
       a(href!="http://www.kayac.com<%= url %>", target="_blank").member-list__grid

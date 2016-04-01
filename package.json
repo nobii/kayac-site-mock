@@ -36,7 +36,7 @@
     "gulp-pleeease": "2.0.*",
     "gulp-sass": "2.1.*",
     "jquery": "2.*",
-    "lodash": "^4.6.1",
+    "lodash": "4.6.*",
     "read-config": "2.0.*",
     "through2": "2.0.*"
   },

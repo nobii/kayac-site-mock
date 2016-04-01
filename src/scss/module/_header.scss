@@ -17,11 +17,11 @@
 .header__menu__btn {
     color: inherit;
     &:hover {
-        color: #f00;
+        color: $hover_color;
     }
     &.is-active {
         text-decoration: none;
-        color: #f00;
+        color: $hover_color;
         font-weight: bold;
     }
 }

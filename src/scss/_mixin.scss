@@ -2,6 +2,6 @@
     border: solid 3px black;
     transition: border-color 0.2s;
     &:hover {
-        border-color: red;
+        border-color: $hover_color;
     }
 }

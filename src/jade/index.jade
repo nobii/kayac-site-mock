@@ -8,11 +8,10 @@ prepend ConfigBlock
 // append JavascriptBlock
 
 block ContentBlock
-  h1.title kayac member page
+  include partial/header
   ul.member-list.js-member-root
   a.more.js-more(href="#") もっと見る
-  footer.footer
-    small &copy; Kayac inc.
+  include partial/footer
   
   script(type="text/lodash")#template-member
     li.member-list__item

@@ -57,8 +57,14 @@ table {
   background-color: #eee; }
 
 .header__title {
-  font-size: 150%;
-  margin-bottom: 0.5em; }
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 300px;
+  height: 60px;
+  background-image: url("../img/logo.png"); }
+  .header__title span {
+    display: none; }
 
 .header__menu__item {
   display: inline-block;

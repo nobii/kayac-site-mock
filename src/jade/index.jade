@@ -12,5 +12,5 @@ block ContentBlock
   
   script(type="text/lodash")#template-news
     li.news-list__item
-      a.news-list__btn(href!='http://www.kayac.com<%= url %>', target="_blank")!= '<%= name %>'
+      a.news-list__btn(href!='http://www.kayac.com<%- url %>', target="_blank")!= '<%- name %>'
   
